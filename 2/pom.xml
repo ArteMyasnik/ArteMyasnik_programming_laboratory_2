@@ -45,7 +45,7 @@
             </descriptorRefs>
             <archive>
                 <manifest>
-                    <mainClass>lab.labproject.MainClass</mainClass>
+                    <mainClass>lab.labproject.Main</mainClass>
                 </manifest>
             </archive>
         </configuration>
