@@ -45,6 +45,7 @@
             </descriptorRefs>
             <archive>
                 <manifest>
+                    <addClasspath>true</addClasspath>
                     <mainClass>lab.labproject.Main</mainClass>
                 </manifest>
             </archive>
@@ -52,7 +53,7 @@
         <executions>
             <execution>
                 <id>make-assembly</id>
-                <phase>package</phase>
+<!--                <phase>package</phase>-->
                 <goals>
                     <goal>single</goal>
                 </goals>

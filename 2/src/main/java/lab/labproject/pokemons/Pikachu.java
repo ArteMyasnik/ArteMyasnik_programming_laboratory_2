@@ -7,7 +7,7 @@ import ru.ifmo.se.pokemon.*;
 public class Pikachu extends Pokemon{
     Pokemon pikachu;
     public Pikachu() {
-        this.pikachu = new Pokemon("Pikachu", 24);
+        super("Pikachu", 24);
         this.setStats(35.0, 55.0, 40.0, 50.0, 50.0, 90.0);
         this.setType(Type.ELECTRIC);
         this.addMove(new ChargeBeam());
