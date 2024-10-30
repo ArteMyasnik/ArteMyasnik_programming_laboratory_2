@@ -11,4 +11,10 @@ public final class Thunder extends SpecialMove {
     protected String describe() {
         return "A wicked thunderbolt is dropped on the target to inflict damage. This may also leave the target with paralysis";
     }
+
+    @Override
+    protected void applyOppEffects(Pokemon pokemon) {
+        Effect effect1 = new Effect().chance(0.3);
+        if (effect1.success()) Effect.paralyze(pokemon);
+    }
 }

@@ -11,4 +11,8 @@ public final class Agility extends StatusMove {
         return "The user relaxes and lightens its body to move faster. This sharply raises the Speed stat";
     }
 
+    @Override
+    protected void applySelfEffects(Pokemon pokemon) {
+        pokemon.setMod(Stat.SPEED, (int) (pokemon.getStat(Stat.SPEED) + 2));
+    }
 }

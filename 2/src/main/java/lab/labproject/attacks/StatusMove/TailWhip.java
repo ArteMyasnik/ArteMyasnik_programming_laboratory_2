@@ -10,4 +10,9 @@ public final class TailWhip extends StatusMove {
     protected String describe() {
         return "The user wags its tail cutely, making opposing Pokémon less wary. This lowers their Defense stats";
     }
+
+    @Override
+    protected void applyOppEffects(Pokemon pokemon) {
+        pokemon.setMod(Stat.DEFENSE, (int) (pokemon.getStat(Stat.DEFENSE) - 1));
+    }
 }

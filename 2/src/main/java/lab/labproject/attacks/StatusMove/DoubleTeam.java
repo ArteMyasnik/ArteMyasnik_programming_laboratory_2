@@ -11,4 +11,10 @@ public final class DoubleTeam extends StatusMove {
     protected String describe() {
         return "By moving rapidly, the user makes illusory copies of itself to raise its evasiveness";
     }
+
+    @Override
+    protected void applySelfEffects(Pokemon pokemon) {
+        pokemon.setMod(Stat.EVASION, (int) (pokemon.getStat(Stat.EVASION) + 1));
+
+    }
 }

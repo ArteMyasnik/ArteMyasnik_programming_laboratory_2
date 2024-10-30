@@ -11,4 +11,10 @@ public final class IronHead extends PhysicalMove {
     protected String describe() {
         return "The user slams the target with its steel-hard head. This may also make the target flinch";
     }
+
+    @Override
+    protected void applyOppEffects(Pokemon pokemon) {
+        Effect effect1 = new Effect().chance(0.1);
+        if (effect1.success()) Effect.flinch(pokemon);
+    }
 }

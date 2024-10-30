@@ -11,5 +11,9 @@ public final class RockTomb extends PhysicalMove {
     protected String describe() {
         return "The user hurls boulders at the target to inflict damage. This also lowers the target’s Speed stat by cutting off its movement";
     }
-    
+
+    @Override
+    protected void applyOppEffects(Pokemon pokemon) {
+        pokemon.setMod(Stat.SPEED, (int) (pokemon.getStat(Stat.SPEED) - 1));
+    }
 }
