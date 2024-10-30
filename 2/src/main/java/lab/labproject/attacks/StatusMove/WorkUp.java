@@ -3,8 +3,7 @@ import ru.ifmo.se.pokemon.*;
 
 public final class WorkUp extends StatusMove {
     StatusMove workUp;
-    public WorkUp() {
-        this.workUp = new StatusMove(Type.NORMAL, 0, 0); // two minuses
+    public WorkUp() { super(Type.NORMAL, 0, 0); // two minuses
     }
 
     @Override

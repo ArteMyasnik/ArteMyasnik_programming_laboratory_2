@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.*;
 public final class Crunch extends PhysicalMove {
     PhysicalMove crunch;
     public Crunch() {
-        this.crunch = new PhysicalMove(Type.DARK, 80, 100);
+        super(Type.DARK, 80, 100);
     }
 
     @Override

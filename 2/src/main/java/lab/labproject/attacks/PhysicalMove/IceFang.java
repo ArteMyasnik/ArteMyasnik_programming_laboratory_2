@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.*;
 public final class IceFang extends PhysicalMove {
     PhysicalMove iceFang;
     public IceFang() {
-        this.iceFang = new PhysicalMove(Type.ICE, 65, 95);
+        super(Type.ICE, 65, 95);
     }
 
     @Override

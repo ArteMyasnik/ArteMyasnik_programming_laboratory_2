@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.*;
 public final class ChargeBeam extends SpecialMove {
     SpecialMove chargeBeam;
     public ChargeBeam() {
-        this.chargeBeam = new SpecialMove(Type.ELECTRIC, 50, 90);
+        super(Type.ELECTRIC, 50, 90);
     }
 
     @Override

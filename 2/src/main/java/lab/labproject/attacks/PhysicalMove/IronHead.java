@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.*;
 public final class IronHead extends PhysicalMove {
     PhysicalMove ironHead;
     public IronHead() {
-        this.ironHead = new PhysicalMove(Type.STEEL, 80, 100);
+        super(Type.STEEL, 80, 100);
     }
 
     @Override

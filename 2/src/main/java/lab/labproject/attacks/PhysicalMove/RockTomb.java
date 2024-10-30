@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.*;
 public final class RockTomb extends PhysicalMove {
     PhysicalMove rockTomb;
     public RockTomb() {
-        this.rockTomb = new PhysicalMove(Type.ROCK, 60, 95);
+        super(Type.ROCK, 60, 95);
     }
 
     @Override

@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.*;
 public final class FeintAttack extends PhysicalMove {
     PhysicalMove feintAttack;
     public FeintAttack() {
-        this.feintAttack = new PhysicalMove(Type.DARK, 60, 100);
+        super(Type.DARK, 60, 100);
     }
 
     @Override

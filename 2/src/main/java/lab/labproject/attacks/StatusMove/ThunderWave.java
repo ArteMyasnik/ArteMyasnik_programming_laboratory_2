@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.*;
 public final class ThunderWave extends StatusMove {
     StatusMove thunderWave;
     public ThunderWave() {
-        this.thunderWave = new StatusMove(Type.ELECTRIC, 0, 90);
+        super(Type.ELECTRIC, 0, 90);
     } // first minuses
 
     @Override

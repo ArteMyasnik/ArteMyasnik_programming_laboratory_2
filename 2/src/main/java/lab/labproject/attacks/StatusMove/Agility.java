@@ -3,8 +3,7 @@ import ru.ifmo.se.pokemon.*;
 
 public final class Agility extends StatusMove {
     StatusMove agility;
-    public Agility() {
-        this.agility = new StatusMove(Type.PSYCHIC, 0, 0); // two minuses
+    public Agility() { super(Type.PSYCHIC, 0, 0); // two minuses
     }
 
     @Override

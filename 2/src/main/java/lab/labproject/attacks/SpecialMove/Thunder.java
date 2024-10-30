@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.*;
 public final class Thunder extends SpecialMove {
     SpecialMove thunder;
     public Thunder() {
-        this.thunder = new SpecialMove(Type.ELECTRIC, 110, 70);
+        super(Type.ELECTRIC, 110, 70);
     }
 
     @Override

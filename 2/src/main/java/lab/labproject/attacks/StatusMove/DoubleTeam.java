@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.*;
 public final class DoubleTeam extends StatusMove {
     StatusMove doubleTeam;
     public DoubleTeam() {
-        this.doubleTeam = new StatusMove(Type.NORMAL, 0, 0);
+        super(Type.NORMAL, 0, 0);
     } // two minuses
 
     @Override
