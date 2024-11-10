@@ -16,26 +16,22 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>project-repo</id>
+            <url>file://${project.basedir}/src/main/lib/Pokemon</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>lib</groupId>
             <artifactId>Pokemon</artifactId>
             <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/lib/Pokemon/Pokemon.jar</systemPath>
         </dependency>
-
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <version>3.4.2</version>
-            <type>maven-plugin</type>
-        </dependency>
-
     </dependencies>
   <build>
     <plugins>
-
         <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -60,29 +56,6 @@
             </execution>
         </executions>
         </plugin>
-
-        
-
-        <!-- <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-            <execution>
-                <id>copy</id>
-                <phase>package</phase>
-                <goals>
-                    <goal>copy-dependencies</goal>
-                </goals>
-                <configuration>
-                    <outputDirectory>
-                        ${project.build.directory}/lib
-                    </outputDirectory>
-                </configuration>
-            </execution>
-        </executions>
-        </plugin> -->
-
     </plugins>
-</build>
-
+  </build>
 </project>
