@@ -21,5 +21,10 @@
       <option name="name" value="project-repo" />
       <option name="url" value="file://C:\Venart12\ITMO\proga\ProgrammingTasks\Laboratory\2/src/main/resources/repo" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="project-repo" />
+      <option name="name" value="project-repo" />
+      <option name="url" value="file://C:\Venart12\ITMO\proga\ProgrammingTasks\Laboratory\2/src/main/lib/Pokemon" />
+    </remote-repository>
   </component>
 </project>

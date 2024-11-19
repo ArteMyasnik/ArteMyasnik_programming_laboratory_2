@@ -1,0 +1,132 @@
+Subject: [PATCH] patch pom.xml
+---
+Index: 2/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/2/pom.xml b/2/pom.xml
+--- a/2/pom.xml	(revision 251f02c4756e5f49b79fac8c47d47575a54b58b1)
++++ b/2/pom.xml	(date 1730805096003)
+@@ -16,73 +16,55 @@
+         <maven.compiler.target>17</maven.compiler.target>
+     </properties>
+ 
++    <repositories>
++        <repository>
++            <id>project-repo</id>
++            <url>file://${project.basedir}/src/main/resources/repo</url>
++        </repository>
++    </repositories>
++
+     <dependencies>
+         <dependency>
+-            <groupId>lib</groupId>
+-            <artifactId>Pokemon</artifactId>
++            <groupId>ru.se.ifmo.ru</groupId>
++            <artifactId>pokemon</artifactId>
+             <version>1.0</version>
+-            <scope>system</scope>
+-            <systemPath>${basedir}/lib/Pokemon/Pokemon.jar</systemPath>
+-        </dependency>
+-
+-        <dependency>
+-            <groupId>org.apache.maven.plugins</groupId>
+-            <artifactId>maven-assembly-plugin</artifactId>
+-            <version>3.4.2</version>
+-            <type>maven-plugin</type>
+         </dependency>
+-
+     </dependencies>
+-  <build>
+-    <plugins>
+-
+-        <plugin>
+-        <groupId>org.apache.maven.plugins</groupId>
+-        <artifactId>maven-assembly-plugin</artifactId>
+-        <configuration>
+-            <descriptorRefs>
+-                <descriptorRef>jar-with-dependencies</descriptorRef>
+-            </descriptorRefs>
+-            <archive>
+-                <manifest>
+-                    <addClasspath>true</addClasspath>
+-                    <mainClass>lab.labproject.Main</mainClass>
+-                </manifest>
+-            </archive>
+-        </configuration>
+-        <executions>
+-            <execution>
+-                <id>make-assembly</id>
+-<!--                <phase>package</phase>-->
+-                <goals>
+-                    <goal>single</goal>
+-                </goals>
+-            </execution>
+-        </executions>
+-        </plugin>
+-
+-        
+-
+-        <!-- <plugin>
+-        <groupId>org.apache.maven.plugins</groupId>
+-        <artifactId>maven-dependency-plugin</artifactId>
+-        <executions>
+-            <execution>
+-                <id>copy</id>
+-                <phase>package</phase>
+-                <goals>
+-                    <goal>copy-dependencies</goal>
+-                </goals>
+-                <configuration>
+-                    <outputDirectory>
+-                        ${project.build.directory}/lib
+-                    </outputDirectory>
+-                </configuration>
+-            </execution>
+-        </executions>
+-        </plugin> -->
+-
+-    </plugins>
+-</build>
+-
+-</project>
+\ No newline at end of file
++
++    <build>
++        <plugins>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-jar-plugin</artifactId>
++                <version>3.2.0</version>
++                <configuration>
++                    <archive>
++                        <manifest>
++                            <mainClass>lab.labproject.Main</mainClass>
++                        </manifest>
++                    </archive>
++                </configuration>
++            </plugin>
++            <plugin>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-shade-plugin</artifactId>
++                <version>3.2.4</version>
++                <executions>
++                    <execution>
++                        <phase>package</phase>
++                        <goals>
++                            <goal>shade</goal>
++                        </goals>
++                        <configuration>
++                            <transformers>
++                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
++                                    <mainClass>lab.labproject.Main</mainClass>
++                                </transformer>
++                            </transformers>
++                        </configuration>
++                    </execution>
++                </executions>
++            </plugin>
++        </plugins>
++    </build>
++</project>
